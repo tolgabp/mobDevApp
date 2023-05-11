@@ -1,0 +1,7 @@
+{
+  "name": "ionic4_redone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
