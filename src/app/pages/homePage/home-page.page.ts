@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { NavController } from '@ionic/angular';
- 
 
 @Component({
-  selector: 'app-films',
-  templateUrl: './films.page.html',
-  styleUrls: ['./films.page.scss'],
+  selector: 'app-home-page',
+  templateUrl: './home-page.page.html',
+  styleUrls: ['./home-page.page.scss'],
 })
-export class FilmsPage implements OnInit {
+export class HomePage implements OnInit {
+
+  
 
   constructor(private navController: NavController, private router: Router) { }
- 
+
   ngOnInit() {
   }
 
@@ -24,9 +25,5 @@ export class FilmsPage implements OnInit {
   gotoPlanets(){
     this.navController.navigateRoot(`/tabs/planets`)
   }
-  backToHomePage(){
-    this.router.navigateByUrl(`/tabs/home`);
-  }
-  
 
 }

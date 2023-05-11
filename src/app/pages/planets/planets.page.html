@@ -1,6 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>planets</ion-title>
+    <ion-buttons slot="start">
+      <ion-button expand="full" (click)="backToHomePage()">
+        <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="start">Home</ion-title>
+    <ion-title slot="end">Planets</ion-title>
   </ion-toolbar>
 </ion-header>
 

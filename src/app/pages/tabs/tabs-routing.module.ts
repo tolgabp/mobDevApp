@@ -7,6 +7,15 @@ const routes: Routes = [
   {path:'tabs',
     component: TabsPage,    
    children: [      
+    {
+      path: 'home',        
+        children: [          
+          {            
+            path: '',            
+            loadChildren: () => import('../homePage/home-page.module').then( m => m.HomePageModule)  
+          },       
+        ]      
+      },
     {        
       path: 'films',        
       children: [          
