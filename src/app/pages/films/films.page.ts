@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { InfiniteScrollCustomEvent, LoadingController, NavController } from '@ionic/angular';
-import { FilmDetailsPage } from '../film-details/film-details.page';
 import { environment } from 'src/environments/environment';
+import { MovieService } from 'src/app/services/movie.service';
+
 
 
 @Component({
@@ -18,7 +19,7 @@ export class FilmsPage implements OnInit {
 
   constructor(private navController: NavController,
     private router: Router,
-    private filmDetailsPage: FilmDetailsPage,
+    private movieService: MovieService,
     private loadingCtrl: LoadingController
   ) { }
 
@@ -33,17 +34,17 @@ export class FilmsPage implements OnInit {
     });
     await loading.present();
 
-    this.filmDetailsPage.getTopRatedFilms(this.currentPage).subscribe((res) => {
+    this.movieService.getTopRatedFilms(this.currentPage).subscribe((res) => {
       loading.dismiss();
-      //this.movies = [...this.movies, ...res.results];
       this.movies.push(...res.results);
       console.log(res);
 
       event?.target.complete();
+      
       if(event){
         event.target.disabled = res.total_pages === this.currentPage;
       }
-    }); // to get the data from observable we need to subsribe to it
+    }); // to get the data from observable we need to subscribe to it
   }
 
   loadMore(event: InfiniteScrollCustomEvent) {

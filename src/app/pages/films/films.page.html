@@ -17,7 +17,7 @@
   <ion-button expand="full" (click)="gotoPlanets()">Switch to Planets</ion-button>
 
   <ion-list>
-    <ion-item button *ngFor="let item of movies">
+    <ion-item button *ngFor="let item of movies" [routerLink]="[item.id]">
       <ion-avatar slot="start">
         <img [src]="imageBaseUrl + '/w92' + item.poster_path"/>
       </ion-avatar>
