@@ -29,6 +29,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": false // it is changed from true as I face a problem with the event https://github.com/ionic-team/ionic-framework/issues/24245
   }
 }
