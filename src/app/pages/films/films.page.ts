@@ -4,8 +4,6 @@ import { InfiniteScrollCustomEvent, LoadingController, NavController } from '@io
 import { environment } from 'src/environments/environment';
 import { MovieService } from 'src/app/services/movie.service';
 
-
-
 @Component({
   selector: 'app-films',
   templateUrl: './films.page.html',
@@ -40,8 +38,8 @@ export class FilmsPage implements OnInit {
       console.log(res);
 
       event?.target.complete();
-      
-      if(event){
+
+      if (event) {
         event.target.disabled = res.total_pages === this.currentPage;
       }
     }); // to get the data from observable we need to subscribe to it

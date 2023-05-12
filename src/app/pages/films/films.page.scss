@@ -6,7 +6,34 @@ ion-button {
   --color: #f5efef;
 }
 
+ion-content{
+  --ion-background-color: #4dbfef;
+	--ion-background-color-rgb: 77,191,239;
 
+	--ion-text-color: #ffffff;
+	--ion-text-color-rgb: 255,255,255;
+
+	--ion-color-step-50: #56c2f0;
+	--ion-color-step-100: #5fc5f1;
+	--ion-color-step-150: #68c9f1;
+	--ion-color-step-200: #71ccf2;
+	--ion-color-step-250: #7acff3;
+	--ion-color-step-300: #82d2f4;
+	--ion-color-step-350: #8bd5f5;
+	--ion-color-step-400: #94d9f5;
+	--ion-color-step-450: #9ddcf6;
+	--ion-color-step-500: #a6dff7;
+	--ion-color-step-550: #afe2f8;
+	--ion-color-step-600: #b8e5f9;
+	--ion-color-step-650: #c1e9f9;
+	--ion-color-step-700: #caecfa;
+	--ion-color-step-750: #d3effb;
+	--ion-color-step-800: #dbf2fc;
+	--ion-color-step-850: #e4f5fd;
+	--ion-color-step-900: #edf9fd;
+	--ion-color-step-950: #f6fcfe;
+
+}
 
 
 // .films-btn{
