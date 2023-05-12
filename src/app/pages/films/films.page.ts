@@ -11,9 +11,13 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class FilmsPage implements OnInit {
 
+  searchTerm: string = '';
+
   movies: any[] = [];
   currentPage = 1;
   imageBaseUrl = environment.images;
+
+  filteredItems: string[] = [];
 
   constructor(private navController: NavController,
     private router: Router,
@@ -64,5 +68,12 @@ export class FilmsPage implements OnInit {
   }
   backToHomePage() {
     this.router.navigateByUrl(`/tabs/home`);
+  }
+
+  onSearch() {
+    this.filteredItems = this.movies.filter(item =>
+      item.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+    console.log(this.searchTerm);
   }
 }
