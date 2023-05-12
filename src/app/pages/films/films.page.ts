@@ -67,7 +67,4 @@ export class FilmsPage implements OnInit {
   backToHomePage() {
     this.router.navigateByUrl(`/tabs/home`);
   }
-
-
-
 }

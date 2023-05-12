@@ -17,7 +17,7 @@ export class HomePage implements OnInit {
   }
 
   openDetails(){
-    this.router.navigateByUrl(`/tabs/films/42`);
+    this.router.navigateByUrl(`/tabs/films`);
   }
   gotoPeople(){
     this.navController.navigateRoot(`/tabs/people`)
